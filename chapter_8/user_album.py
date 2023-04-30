@@ -1,11 +1,9 @@
 #8-8 make album function. 
 #while loop inserted
 
-def make_album(artist, album, num_of_songs=None):
+def make_album(artist, album,):
     """a function that creates an album for an muscian"""
-    f_album = {'muscian' : artist.title(), 'album_name' : album.title()}
-    if num_of_songs:
-        f_album['number of songs'] = num_of_songs
+    f_album = {'musician' : artist.title(), 'album_name' : album.title()}
     return f_album
 
 prompt = f"\nHello, please enter an artist and album. "
@@ -20,4 +18,5 @@ while True:
     if album_name == 'q':
         break
 
-complete_album = 
+completed_album = make_album(artist_name, album_name)
+print(completed_album)
