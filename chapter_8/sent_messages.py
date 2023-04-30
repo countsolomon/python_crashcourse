@@ -26,5 +26,9 @@ completed_messages = []
 send_messages(unprinted_messages, completed_messages)
 make_texts(completed_messages)
 
+#print out both lists for verification. 
+print('\n')
+print(unprinted_messages)
+print(completed_messages)
 
 
