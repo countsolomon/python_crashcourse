@@ -15,10 +15,12 @@ def send_messages(unprinted_messages, completed_messages):
         print(f"\nSending the following message: {send_message}")
         completed_messages.append(send_message)
         
-  
-unprinted_messages = ['hello', 'how are you?', 'who are you?', 'how are you?']
+#a list containing the messages. 
+unprinted_messages = ['hello', 'how are you?', 'who are you?', 'what are you?']
+#an empty list that the messages will append to.
 completed_messages = []
 
+#call the dang thing
 send_messages(unprinted_messages[:], completed_messages)
 print(f"\nVerification of the copied list and the original list:")
 print(unprinted_messages)
