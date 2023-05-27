@@ -26,16 +26,30 @@ class User:
         print(f'\nWelcome to the company ' \
               f' {self.first_name.title()} {self.last_name.title()}') 
         
+    def show_login_attempts(self):
+        """show the number of login attempts"""
+        print(f'The user has logged in {self.login_attempts}')
+
     def increment_login_attempts(self):
         """add the number of login attempts by 1. 
         simulate the user logging in. 
         """
         self.login_attempts += 1
 
-    def reset__login_attempts(self):
+    def reset_login_attempts(self):
         """reset the number of login attempts to 0"""
         self.login_attempts = 0
 
 
 christopher = User('christopher', 'solomon', 'information technology', 30)
 print(christopher.describe_user())
+#increment the login attempts by 2
+christopher.increment_login_attempts()
+christopher.increment_login_attempts()
+christopher.show_login_attempts()
+
+
+#reset the login attempts
+christopher.reset_login_attempts()
+christopher.show_login_attempts()
+
