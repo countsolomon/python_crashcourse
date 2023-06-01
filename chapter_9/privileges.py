@@ -1,4 +1,4 @@
-#exercise 9-7 admin class
+#exercise 9-8 insert privilege class
 
 class User:
     """a simple class to describe a user profile."""
@@ -28,16 +28,16 @@ class Admin(User):
     def __init__(self, first_name, last_name, department, age):
         """initialize the admin class"""
         super().__init__(first_name, last_name, department, age)
+        self.privileges = Privileges()
+
+class Privileges():
+    """a class that shows privileges"""
 
     def show_privileges(self, *privs):
-        """add privileges to the admin users"""
-        print(f'The user has the following privileges: ')
-        for self.privileges in privs:
-            print(f'--{self.privileges}')
+            """add privileges to the user"""
+            print(f'The user has the following privileges: ')
+            for self.privileges in privs:
+                print(f'--{self.privileges}')
 
-#create the new admin user      
-admin1 = Admin('christopher', 'solomon', 'IT', '29')
-
-#call the new admin user
-#insert the needed privileges
-admin1.show_privileges('view files', 'show files', 'delete files')
+admin1 = Admin('christopher', 'solomon', 'IT', 27)
+admin1.privileges.show_privileges('can read', 'can write', 'can view')
