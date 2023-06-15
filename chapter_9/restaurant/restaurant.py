@@ -2,10 +2,10 @@
 class Restaurant:
     """a description of a restaurant"""
 
-    def __init__(self, restaurant_name, cuisin_type):
-        """initalize the restaurant_name and cuisine_type attributes"""
+    def __init__(self, restaurant_name, cuisine_type):
+        """initialize the restaurant_name and cuisine_type attributes"""
         self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisin_type
+        self.cuisine_type = cuisine_type
 
 
     def describe_restaurant(self):

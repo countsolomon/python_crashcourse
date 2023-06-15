@@ -1,4 +1,4 @@
-#exercise 9-7 admin class
+"""a module that holds various classes on user creation"""
 
 class User:
     """a simple class to describe a user profile."""
@@ -23,21 +23,18 @@ class User:
         print(f'\nWelcome to the company {self.first_name.title()} {self.last_name.title()}')
 
 class Admin(User):
-    """a user class specifically for an Admin user"""
+    """a user class speicifically for an Admin user"""
     
     def __init__(self, first_name, last_name, department, age):
         """initialize the admin class"""
         super().__init__(first_name, last_name, department, age)
+        self.privileges = Privileges()
+
+class Privileges():
+    """a class that shows privileges"""
 
     def show_privileges(self, *privs):
-        """add privileges to the admin users"""
-        print(f'The user has the following privileges: ')
-        for self.privileges in privs:
-            print(f'--{self.privileges}')
-
-#create the new admin user      
-admin1 = Admin('christopher', 'solomon', 'IT', '29')
-
-#call the new admin user
-#insert the needed privileges
-admin1.show_privileges('view files', 'show files', 'delete files')
+            """add privileges to the user"""
+            print(f'The user has the following privileges: ')
+            for self.privileges in privs:
+                print(f'--{self.privileges}')
