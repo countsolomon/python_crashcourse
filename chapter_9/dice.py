@@ -15,7 +15,9 @@ class Die:
     def roll_die(self, sides):
         """simulate rolling the dice"""
         rolling = RI(1, sides)  
-        print(rolling)
+        print(f'the dice landed on side: {rolling}')
 
 default_size = Die(6)
 default_size.roll_die(6)
+
+ten_
