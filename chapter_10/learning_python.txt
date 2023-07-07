@@ -1,0 +1,4 @@
+In Python you can create lists of strings
+In Python you can import modules from other developers
+In Python you can loop through a list 
+In Python you can create classes 
