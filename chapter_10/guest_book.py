@@ -1,23 +1,24 @@
 #exercise 10 - 4: guest book
 from pathlib import Path
 
-path = Path('guest_book.txt')
-
 prompt = f"Welcome to the guest list."
-prompt += f"When you are finished type 'End'"
-prompt1 = f"Type in your name: "
+prompt += f"\nType in your name."
+prompt += f"\nWhen you are finished, type 'quit'. "
 
-print(prompt)
-guest = input(prompt1)
+guest_book = []
 
-# the list that will collect all the guest names.
-guest_list = []
+while True:
+    guest = input(prompt)
 
-while guest != 'End':
-    guest_list.append(guest)
+    if guest == 'quit':
+        break
+    else: 
+        guest_book.append(guest)
     
-#print out the list when finished 
-for g in guest_list:
-    print(g)
+written_guest_book = ''
 
-path.write_text(guest_list)
+for g in guest_book:
+    written_guest_book = f"{written_guest_book} \n {g.title()}"
+
+path = Path('guest_book.txt')
+path.write_text(written_guest_book)
